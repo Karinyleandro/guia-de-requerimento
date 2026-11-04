@@ -1,28 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GUIA DE REQUERIMENTO</title>
 </head>
+
 <body>
     <header>
-        <h1>GUIA DE REQUERIMENTO</h1>
-        <p>INSTITUTO FEDERAL CEARA CAMPUS CEDRO</p> 
+        <table>
+            <tr>
+                <td>
+                    <img src="image/image.png" alt="" width="90" height="70">
+                </td>
+                <td>
+                    <h1>GUIA DE REQUERIMENTO</h1>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <p>INSTITUTO FEDERAL CEARA CAMPUS CEDRO</p>
     </header>
 
     <main>
         <form id="guia-requerimento" action="/guia-requerimento" method="post" enctype="multipart/form-data">
-        <fieldset>
-            <legend>Requerente</legend>
-        </fieldset>
-            
+
+            <!--Protocolo-->
+            <label for="protocolo">Protocolo n°</label><br>
+            <input type="number"> <br> <br>
+
+            <fieldset>
+                <fieldset>
+                    <label for="requerente">Requerente</label>
+                    <input type="text" id="requerente" name="requerente" required> <br><br>
+
+
+                    <label for="numero-matricula">N° DE MATRICULA</label>
+                    <input type="number" id="numero-matricula" name="numero-matricula" required>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><b>PREENCHER ➔</b></legend>
+
+                    <label for="data-nascimento">DATA NASCIMENTO:</label>
+                    <input type="date" id="data-nascimento" name="data-nascimento" required>
+
+                    <label for="naturalidade">NATURALIDADE:</label>
+                    <input type="text" id="naturalidade" name="naturalidade" required> <br>
+
+                    <label for="filiacao">FILIAÇÃO:</label>
+                    <input type="text" name="filiacao" id="filiacao" required> <br>
+                </fieldset>
+                <br>
+
+                <fieldset>
+                    <label for="curso">CURSO:</label>
+                    <input type="text" id="curso" name="curso" required>
+
+                    <label for="periodo">PERÍODO:</label>
+                    <input type="number" id="periodo" name="periodo" required>
+
+                    <label for="turno">TURNO:</label>
+                    <input type="text" id="turno" name="turno" required> <br><br>
+
+                    <label for="telefone">TELEFONE:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required> 
+
+                    <label for="email">E-MAIL:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+            </fieldset>
+
+            <br>
+            <fieldset>
+                <legend>ASSINALE:</legend>
+
+                <input type="checkbox" id="via" name="via" required>
+                <label for="via">2° Via (especificar)  | CCA</label>
+
+                <br>
+                <input type="checkbox" id="aproveitamento" name="aproveitamento" required>
+                <label for="aproveitamento">Aproveitamento de Disciplina (anexar Histórico Escolar e Programa da Disciplina) | Coordenação do Curso</label>
+
+                <br>
+                <input type="checkbox" id="matricula" name="matricula" required>
+                <label for="matricula">Matrícula fora do prazo (justificar) | CCA</label>
+
+                <br>
+                <input type="checkbox" id="cancelamento" name="cancelamento" required>
+                <label for="cancelamento">Cancelamento da Matrícula | CCA</label>
+
+
+
+
+               
+            </fieldset>
+
+
+
         </form>
     </main>
 
     <footer>
 
     </footer>
-    
+
 </body>
+
 </html>
